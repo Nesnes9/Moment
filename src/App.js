@@ -59,7 +59,9 @@ export default class App extends Component{
 
         return (
             <div className="App">
-                <h1>Movies of the Moment</h1>
+                <h1 className="Title">Movies of the Moment</h1>
+            
+
                 
                 <FilmsCollection data={this.state.films} showFilmModal={this.showFilmModal}/>
 
@@ -73,15 +75,18 @@ export default class App extends Component{
                         width: 400,
                         top: '10%',
                         left: '35%',
+                        padding: '15px',
 
                         
 
                         }}>
-                    <h2>{filmModal.title}</h2>
+
+                    <h2 style={{ display: 'flex', justifyContent: 'center', }} >{filmModal.title}</h2>
 
                     <img
                             src={'https://image.tmdb.org/t/p/w500' + filmModal.poster_path}
                             style={{ 
+                            position: 'static',   
                             height: 300,
                             width: 400 }}
                         />
@@ -89,7 +94,7 @@ export default class App extends Component{
                     
                          <p>
 
-                            Date de sortie : 
+                           <strong>Date de sortie : </strong>  
                         {
                             filmModal.release_date
                         }
@@ -97,7 +102,7 @@ export default class App extends Component{
                         </p>
 
                              <p>
-                            Synopsis :
+                             <strong> Synopsis : </strong>
                              </p>
 
                         <p>
