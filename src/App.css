@@ -1,4 +1,19 @@
 .App {
+ 
   text-align: center;
-  margin: 50px;
+  background-color: rgb(18, 138, 194);
+  margin-top: 0%;
+}
+
+.Title {
+  font-size: 500%;
+  margin-top: 0%;
+  padding-top: 50px;
+  text-shadow: 2px 2px rgba(39, 39, 155, 0.5);
+}
+
+
+.block::before {
+  content: "";
+  display:table;
 }
